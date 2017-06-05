@@ -27,5 +27,7 @@ while True:
     if int(last_update) + interval_secs < int(time.time()):
         stats = get_stats()
     for i in stats:
-        print(i['rank'] + " " + i['id'] + " " + "$" + i['price_usd'])
+        price = format(float(i['price_usd']), '.2f')
+        print(i['rank'] + " " + i['id'] + " " + "$" + price)
     time.sleep(interval_secs)
+

@@ -28,6 +28,6 @@ while True:
         stats = get_stats()
     for i in stats:
         price = format(float(i['price_usd']), '.2f')
-        print(i['rank'] + " " + i['id'] + " " + "$" + price)
+        print(i['rank'].zfill(2) + " " + i['id'] + " " + "$" + price)
+    print()
     time.sleep(interval_secs)
-
